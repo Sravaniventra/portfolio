@@ -65,20 +65,53 @@ html, body{
   pointer-events:none;
 }
 
-/* NAVBAR */
+
 
 /* NAVBAR */
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 40px;
-  position:sticky;
-  top:0;
-  background:rgba(0,0,0,0.25);
-  backdrop-filter:blur(10px);
-  z-index:999;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+nav .logo{
+font-size:28px;
+font-weight:700;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+nav ul li a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+position:relative;
+}
+
+nav ul li a::after{
+content:"";
+position:absolute;
+width:0;
+height:3px;
+background:#ffe082;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav ul li a:hover::after{
+width:100%;
 }
 
 .menu-toggle{
@@ -87,13 +120,15 @@ font-size:28px;
 cursor:pointer;
 }
 
+/* MOBILE NAVBAR */
+
 @media (max-width:768px){
 
 nav{
 flex-direction:row;
 justify-content:space-between;
 align-items:center;
-padding:12px 16px;
+padding:15px 20px;
 }
 
 .menu-toggle{
@@ -117,43 +152,50 @@ nav ul.active{
 display:flex;
 }
 
-}
-
-
-nav .logo{
-  font-size:28px;
-  font-weight:700;
-}
-
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
 nav ul li a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  position:relative;
+font-size:16px;
 }
 
-nav ul li a::after{
-  content:"";
-  position:absolute;
-  width:0;
-  height:3px;
-  background:#ffe082;
-  left:0;
-  bottom:-5px;
-  transition:0.3s;
+.hero h1{
+font-size:28px;
 }
 
-nav ul li a:hover::after{
-  width:100%;
+.hero p{
+font-size:15px;
 }
 
+.profile-pic-container{
+width:130px;
+height:130px;
+}
+
+.profile-pic{
+width:130px;
+height:130px;
+}
+
+.project-card{
+width:95%;
+}
+
+.edu-card{
+width:95%;
+}
+
+.cert-list li{
+width:95%;
+}
+
+.skills-container span{
+padding:10px 18px;
+font-size:14px;
+}
+
+.section{
+padding:50px 15px;
+}
+
+}
 /* HERO */
 
 .hero{
