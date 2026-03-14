@@ -18,6 +18,7 @@ body{
   transform:translateY(30px);
   animation:fadeUp 1s ease forwards;
 }
+
 @keyframes fadeUp{
   to{opacity:1; transform:translateY(0);}
 }
@@ -27,6 +28,7 @@ body{
   transform:translateY(-20px);
   animation:fadeSlide 0.8s ease forwards;
 }
+
 @keyframes fadeSlide{
   to{opacity:1; transform:translateY(0);}
 }
@@ -34,6 +36,7 @@ body{
 .floating{
   animation:floating 4s ease-in-out infinite;
 }
+
 @keyframes floating{
   0%{transform:translateY(0);}
   50%{transform:translateY(-10px);}
@@ -45,6 +48,7 @@ body{
   border-radius:16px;
   overflow:hidden;
 }
+
 .glow-border::before{
   content:"";
   position:absolute;
@@ -57,6 +61,8 @@ body{
           mask-composite: exclude;
   pointer-events:none;
 }
+
+/* NAVBAR */
 
 nav{
   display:flex;
@@ -79,6 +85,7 @@ nav ul{
   list-style:none;
   display:flex;
   gap:30px;
+  flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -98,9 +105,12 @@ nav ul li a::after{
   bottom:-5px;
   transition:0.3s;
 }
+
 nav ul li a:hover::after{
   width:100%;
 }
+
+/* HERO */
 
 .hero{
   text-align:center;
@@ -126,7 +136,11 @@ nav ul li a:hover::after{
   margin-top:20px;
   font-weight:700;
 }
-.hero span{color:#ffe082;}
+
+.hero span{
+  color:#ffe082;
+}
+
 .hero p{
   font-size:20px;
   margin:10px 0;
@@ -144,10 +158,13 @@ nav ul li a:hover::after{
   text-decoration:none;
   transition:0.3s;
 }
+
 .btn:hover{
   background:#fff;
   box-shadow:0 0 15px #ffe082;
 }
+
+/* SECTIONS */
 
 .section{
   padding:70px 20px;
@@ -160,6 +177,7 @@ h2{
   font-weight:700;
   position:relative;
 }
+
 h2::after{
   content:"";
   width:60px;
@@ -180,6 +198,8 @@ h2::after{
   font-size:18px;
 }
 
+/* SKILLS */
+
 .skills-container span{
   display:inline-block;
   background:rgba(255,255,255,0.2);
@@ -191,11 +211,14 @@ h2::after{
   font-weight:600;
   transition:0.3s;
 }
+
 .skills-container span:hover{
   transform:scale(1.1);
   background:#ffe082;
   color:#222;
 }
+
+/* PROJECTS */
 
 .project-card{
   background:rgba(255,255,255,0.15);
@@ -230,6 +253,7 @@ h2::after{
   backdrop-filter:blur(6px);
   transition:0.45s ease;
 }
+
 .project-card:hover::after{
   right:15px;
 }
@@ -244,9 +268,9 @@ h2::after{
   display:flex;
   justify-content:center;
   align-items:center;
-  z-index:2000;
   padding:20px;
   backdrop-filter:blur(5px);
+  z-index:99999;
 }
 
 .modal-box{
@@ -289,10 +313,17 @@ h2::after{
   margin:10px 0;
 }
 
-@keyframes popUp{
-  from{transform:scale(0.8); opacity:0;}
-  to{transform:scale(1); opacity:1;}
+@keyframes modalPop{
+  from{
+    transform:scale(0.8);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
 }
+/* EDUCATION */
 
 .edu-card{
   background:rgba(255,255,255,0.2);
@@ -304,10 +335,10 @@ h2::after{
   box-shadow:0 4px 25px rgba(0,0,0,0.25);
 }
 
+/* CERTIFICATIONS */
+
 .cert-list{
   list-style:none;
-  padding:0;
-  margin:0;
 }
 
 .cert-list li{
@@ -318,6 +349,8 @@ h2::after{
   border-radius:10px;
   backdrop-filter:blur(10px);
 }
+
+/* BACK TO TOP */
 
 #backToTop{
   position:fixed;
@@ -332,60 +365,14 @@ h2::after{
   cursor:pointer;
   display:none;
   z-index:9999;
-  box-shadow:0 4px 20px rgba(0,0,0,0.3);
 }
+
 #backToTop:hover{
   background:#fff;
 }
 
-.theme-btn{
-  margin-left:20px;
-  padding:8px 12px;
-  background:#ffe082;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:18px;
-  border:none;
-  transition:0.3s;
-}
+/* MOBILE RESPONSIVE FIX */
 
-.dark-mode{
-  --bg1:#0b0b0b;
-  --bg2:#1a1a1a;
-  --text:#eaeaea;
-  --card:rgba(255,255,255,0.08);
-  --gold:#ffd86b;
-}
-
-body.dark-mode{
-  background:linear-gradient(135deg, var(--bg1), var(--bg2));
-  color:var(--text);
-}
-
-body.dark-mode nav{
-  background:rgba(255,255,255,0.05);
-}
-
-body.dark-mode h2::after{
-  background:var(--gold);
-}
-
-body.dark-mode .project-card,
-body.dark-mode .edu-card,
-body.dark-mode .cert-list li{
-  background:var(--card);
-  color:var(--text);
-}
-
-body.dark-mode .modal-box{
-  background:#111;
-  color:#fff;
-}
-
-body.dark-mode .theme-btn{
-  background:#333;
-  color:#ffe082;
-}
 @media (max-width:768px){
 
 nav{
@@ -395,10 +382,19 @@ padding:15px;
 }
 
 nav ul{
-flex-direction:column;
-gap:12px;
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+gap:15px;
 margin-top:10px;
-text-align:center;
+flex-wrap:nowrap;
+overflow-x:auto;
+}
+
+nav ul li a{
+font-size:14px;
+white-space:nowrap;
 }
 
 nav .logo{
@@ -445,4 +441,38 @@ font-size:14px;
 padding:50px 15px;
 }
 
+}
+
+.dark-mode{
+  background:linear-gradient(135deg,#0b0b0b,#1a1a1a);
+  color:#eaeaea;
+}
+
+.dark-mode nav{
+  background:rgba(255,255,255,0.05);
+}
+
+.dark-mode h2::after{
+  background:#ffd86b;
+}
+
+.dark-mode .project-card,
+.dark-mode .edu-card,
+.dark-mode .cert-list li{
+  background:rgba(255,255,255,0.08);
+  color:#eaeaea;
+}
+
+.dark-mode .skills-container span{
+  background:rgba(255,255,255,0.12);
+}
+
+.dark-mode .modal-box{
+  background:#111;
+  color:#fff;
+}
+
+.dark-mode .theme-btn{
+  background:#333;
+  color:#ffd86b;
 }

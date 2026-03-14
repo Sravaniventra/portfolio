@@ -7,130 +7,195 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
 
-  <nav class="fade-slide">
-    <h2 class="logo">Ventrapragada Baby Sravani</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav class="fade-slide">
+  <h2 class="logo">Ventrapragada Baby Sravani</h2>
 
-    <button id="themeToggle" class="theme-btn">🌙</button>
-  </nav>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-  <header class="hero fade-up">
-    <div class="hero-content">
-      <div class="profile-pic-container glow-border">
-        <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
-      </div>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</nav>
 
-      <h1 class="floating">Hi, I'm <span>Ventrapragada Baby Sravani</span></h1>
 
-      <p id="typewriter-text">Machine Learning & Full-Stack Developer</p>
+<header class="hero fade-up">
 
-      <a href="Ventrapragada Baby Sravani_resume.pdf" download class="btn glow-border">
-        Download Resume
-      </a>
+  <div class="hero-content">
+
+    <div class="profile-pic-container glow-border">
+      <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
     </div>
-  </header>
 
-  <section id="about" class="section fade-up">
-    <h2>About Me</h2>
-    <p>
-      I’m a 3rd-year IT student with strong interests in Machine Learning, Full-Stack Development, and Data Structures & Algorithms.
-      I enjoy solving problems with clarity and logic, and I love building things that are both meaningful and well-designed.
-      I’m confident, adaptable, and always eager to explore new technologies and create impactful work.
+    <h1 class="floating">
+      Hi, I'm <span>Ventrapragada Baby Sravani</span>
+    </h1>
+
+    <p id="typewriter-text">
+      Machine Learning & Full-Stack Developer
     </p>
-  </section>
+
+    <a href="Ventrapragada Baby Sravani_resume.pdf" download class="btn glow-border">
+      Download Resume
+    </a>
+
+  </div>
+
+</header>
 
 
-  <section id="skills" class="section fade-up">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <span>Java</span><span>Python</span><span>Data Structures and Algorithms</span><span>OOP</span>
-      <span>OS</span><span>Machine Learning</span><span>Data Science</span><span>Tableau</span>
-      <span>Power BI</span><span>Git</span><span>Full-Stack Web Development</span>
-      <span>React</span><span>SQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GenAI</span>
-    </div>
-  </section>
+<section id="about" class="section fade-up">
+
+  <h2>About Me</h2>
+
+  <p>
+    I’m a 3rd-year IT student with strong interests in Machine Learning,
+    Full-Stack Development, and Data Structures & Algorithms.
+
+    I enjoy solving problems with clarity and logic, and I love building
+    things that are both meaningful and well-designed.
+
+    I’m confident, adaptable, and always eager to explore new technologies
+    and create impactful work.
+  </p>
+
+</section>
 
 
-  <section id="projects" class="section fade-up">
-    <h2>Projects</h2>
+<section id="skills" class="section fade-up">
 
-    <div class="project-card glow-border" onclick="openModal('touchless')">
-      <h3>TouchLess Trace</h3>
-      <p>Sensor-free fingerprint verification using CNNs.</p>
-    </div>
+  <h2>Skills</h2>
 
-    <div class="project-card glow-border" onclick="openModal('pricelens')">
-      <h3>Price Lens - Comparison & Alert System</h3>
-      <p>Tracks e-commerce product prices and sends automated alerts.</p>
-    </div>
+  <div class="skills-container">
+    <span>Java</span>
+    <span>Python</span>
+    <span>Data Structures and Algorithms</span>
+    <span>OOP</span>
+    <span>OS</span>
+    <span>Machine Learning</span>
+    <span>Data Science</span>
+    <span>Tableau</span>
+    <span>Power BI</span>
+    <span>Git</span>
+    <span>Full-Stack Web Development</span>
+    <span>React</span>
+    <span>SQL</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>GenAI</span>
+  </div>
 
-    <div class="project-card glow-border" onclick="openModal('restaurant')">
-      <h3>Restaurant Insights & Recommendation System</h3>
-      <p>ML-based analytics and personalized recommendations.
-        
-      </p>
-    </div>
-
-  </section>
-
-  <div id="modal-container"></div>
-
-  <section id="education" class="section fade-up">
-    <h2>Education</h2>
-
-    <div class="edu-card glow-border">
-      <h3>Bachelor of Technology in Information Technology</h3>
-      <p>Gokaraju Rangaraju Institute of Engineering & Technology</p>
-      <p>Hyderabad, Telangana • 2027 • CGPA: 8.68</p>
-    </div>
-
-    <div class="edu-card glow-border">
-      <h3>Intermediate - MPC</h3>
-      <p>Sri Chaitanya Junior College</p>
-      <p>Hyderabad, Telangana • 2023 • Percentage: 96.1</p>
-    </div>
-
-    <div class="edu-card glow-border">
-      <h3>School</h3>
-      <p>St. Francis Girls High School</p>
-      <p>Hyderabad, Telangana • 2021 • CGPA: 9.8</p>
-    </div>
-  </section>
+</section>
 
 
-  <section id="certifications" class="section fade-up">
-    <h2>Certifications</h2>
-    <ul class="cert-list">
-      <li>Data Science for Engineers – NPTEL (2025)</li>
-      <li>Data Science – Udemy (2026)</li>
-      <li>Oracle Certified Gen AI Professional (2025)</li>
-      <li>Career Essentials in Generative AI – Microsoft & LinkedIn (2025)</li>
-    </ul>
-  </section>
+<section id="projects" class="section fade-up">
+
+  <h2>Projects</h2>
+
+  <div class="project-card glow-border" onclick="openModal('touchless')">
+    <h3>TouchLess Trace - Fingerprint Recognition System</h3>
+    <p>Sensor-free fingerprint verification using CNNs.</p>
+  </div>
+
+  <div class="project-card glow-border" onclick="openModal('pricelens')">
+    <h3>Price Lens - Comparison & Alert System</h3>
+    <p>Tracks e-commerce product prices and sends automated alerts.</p>
+  </div>
+
+  <div class="project-card glow-border" onclick="openModal('SKillMerge')">
+    <h3>SKillMerge - Automated Study Group Formation System</h3>
+    <p>An automated study group formation system.</p>
+  </div>
+
+  <!-- <div class="project-card glow-border" onclick="openModal('restaurant')">
+    <h3>Restaurant Insights & Recommendation System</h3>
+    <p>ML-based analytics and personalized recommendations.</p>
+  </div> -->
+
+</section>
+
+<div id="modal-container"></div>
 
 
-  <section id="contact" class="section fade-up">
-    <h2>Contact</h2>
-    <p>Email: sravaniventra@gmail.com</p>
-    <p>LinkedIn: in/sravani-ventrapragada-63090b316/</p>
-    <p>GitHub: github.com/Sravaniventra</p>
-  </section>
+<section id="education" class="section fade-up">
 
-  <button id="backToTop" onclick="scrollToTop()">↑</button>
+  <h2>Education</h2>
 
-  <footer>
-    <p>© 2026 Ventrapragada Baby Sravani | Portfolio</p>
-  </footer>
+  <div class="edu-card glow-border">
+    <h3>Bachelor of Technology in Information Technology</h3>
+    <p>Gokaraju Rangaraju Institute of Engineering & Technology</p>
+    <p>Hyderabad, Telangana • 2027 • CGPA: 8.72</p>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="edu-card glow-border">
+    <h3>Intermediate - MPC</h3>
+    <p>Sri Chaitanya Junior College</p>
+    <p>Hyderabad, Telangana • 2023 • Percentage: 96.1</p>
+  </div>
+
+  <div class="edu-card glow-border">
+    <h3>School</h3>
+    <p>St. Francis Girls High School</p>
+    <p>Hyderabad, Telangana • 2021 • CGPA: 9.8</p>
+  </div>
+
+</section>
+
+
+<section id="certifications" class="section fade-up">
+
+  <h2>Certifications</h2>
+
+  <ul class="cert-list">
+    <li>Data Science for Engineers – NPTEL (2025)</li>
+    <li>Data Science – Udemy (2026)</li>
+    <li>Oracle Certified Gen AI Professional (2025)</li>
+    <li>Career Essentials in Generative AI – Microsoft & LinkedIn (2025)</li>
+  </ul>
+
+</section>
+
+
+<section id="contact" class="section fade-up">
+
+  <h2>Contact</h2>
+
+  <p>Email: sravaniventra@gmail.com</p>
+
+  <p>
+    LinkedIn:
+    <a href="https://linkedin.com/in/sravani-ventrapragada-63090b316" target="_blank">
+      sravani-ventrapragada
+    </a>
+  </p>
+
+  <p>
+    GitHub:
+    <a href="https://github.com/Sravaniventra" target="_blank">
+      Sravaniventra
+    </a>
+  </p>
+
+</section>
+
+
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+
+
+<footer>
+  <p>© 2026 Ventrapragada Baby Sravani | Portfolio</p>
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
