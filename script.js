@@ -128,7 +128,43 @@ SkillMerge is an ML-powered study group formation system that automatically clus
 </div>
 </div>`;
 }
+if (project === 'apiRateLimiter') {
+  content = `
+<div class="modal-bg" onclick="closeModal()">
+<div class="modal-box" onclick="event.stopPropagation()">
 
+<h2>ML-Based Adaptive API Rate Limiter System</h2>
+
+<p><strong>Overview:</strong><br>
+Developed an AI-powered API security framework that uses Machine Learning to detect malicious traffic and dynamically regulate API requests, protecting applications from brute-force attacks, bot activity, API abuse, and DDoS attempts.</p>
+
+<p><strong>My Contributions:</strong></p>
+<ul>
+<li>Designed an adaptive rate-limiting system using AI and Machine Learning.</li>
+<li>Implemented Isolation Forest for anomaly detection in API traffic.</li>
+<li>Integrated Fixed Window, Sliding Window, and Token Bucket algorithms for intelligent request control.</li>
+<li>Built secure authentication using JWT and Multi-Factor Authentication (MFA).</li>
+<li>Developed a real-time dashboard to monitor API traffic and security metrics.</li>
+</ul>
+
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Improved API security through AI-driven threat detection and adaptive rate limiting.</li>
+<li>Reduced false positives while maintaining high protection against malicious requests.</li>
+<li>Enabled real-time identification and mitigation of suspicious API behavior.</li>
+</ul>
+
+<img src="img/apiratelimiter1.png">
+<img src="img/apiratelimiter2.png">
+<img src="img/apiratelimiter3.png">
+<img src="img/apiratelimiter4.png">
+
+<button class="modal-close" onclick="closeModal()">Close</button>
+
+</div>
+</div>`;
+
+}
 if (project === 'pricelens') {
 content = `
 <div class="modal-bg" onclick="closeModal()">
